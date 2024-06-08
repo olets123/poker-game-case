@@ -1,0 +1,6 @@
+<div class="m-4 p-4">
+	<span class="loading loading-ring loading-xs"></span>
+	<span class="loading loading-ring loading-sm"></span>
+	<span class="loading loading-ring loading-md"></span>
+	<span class="loading loading-ring loading-lg"></span>
+</div>
