@@ -4,7 +4,7 @@
 	import type { Hand } from '../../$lib/hand-types';
 	import { pokerApi } from '../../services/poker-apis';
 	import LoadingRing from '../../components/LoadingRing.svelte';
-	import HandsTable from 'components/HandsTable.svelte';
+	import HandsTable from '../../components/HandsTable.svelte';
 
 	const getAllHands = async (): Promise<Hand[] | undefined> => {
 		try {
