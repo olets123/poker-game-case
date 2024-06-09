@@ -5,7 +5,14 @@ import pokerRoutes from './routes/pokerRoutes'
 import dotenv from 'dotenv'
 dotenv.config({ path: __dirname + '/../.env' })
 
-const mongoURI = process.env.MONGO_DB_URI
+// Do not use this in production
+
+const MONGO_DB_URI =
+  'mongodb+srv://skogliiii:zK50T7s2ou5BiKmW@poker-cluster.0vumsog.mongodb.net/?retryWrites=true&w=majority&appName=poker-cluster'
+
+// const mongoURI = process.env.MONGO_DB_URI
+
+const mongoURI = MONGO_DB_URI
 
 if (!mongoURI) {
   throw new Error('MONGO_URI is not defined in the .env file')
