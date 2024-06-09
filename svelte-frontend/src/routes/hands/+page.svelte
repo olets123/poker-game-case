@@ -1,10 +1,10 @@
 <script lang="ts">
 	import Nav from '../../components/Nav.svelte';
 	import { onMount } from 'svelte';
-	import Card from '../../components/Card.svelte';
 	import type { Hand } from '../../$lib/hand-types';
 	import { pokerApi } from '../../services/poker-apis';
 	import LoadingRing from '../../components/LoadingRing.svelte';
+	import HandsTable from 'components/HandsTable.svelte';
 
 	const getAllHands = async (): Promise<Hand[] | undefined> => {
 		try {
@@ -32,32 +32,7 @@
 						<div class="stat-value">{hands.length}</div>
 					</div>
 				</div>
-				<div class="overflow-auto w-full h-auto">
-					<table id="hands-table" class="table table-sm">
-						<thead class="sticky top-0 divide-y z-50 shadow-lg bg-neutral">
-							<tr>
-								<th>Hand</th>
-								<th>Ranking</th>
-							</tr>
-						</thead>
-						<tbody>
-							{#each hands as hand}
-								<tr>
-									<td>
-										<div class="flex flex-row justify-start">
-											{#each hand.cards as card}
-												<Card {card} />
-											{/each}
-										</div>
-									</td>
-									<td>
-										{hand.rankings}
-									</td>
-								</tr>
-							{/each}
-						</tbody>
-					</table>
-				</div>
+				<HandsTable {hands} />
 			{/if}
 		{/await}
 	</div>
