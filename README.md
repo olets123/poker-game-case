@@ -19,6 +19,8 @@ MONGO_DB_URI='your-mongodb-uri'
 
 To start Svelte frontend and Node backend server on localhost:
 
+
+
 ```bash
 # Run following commands to build docker and start server
 pnpm poker
@@ -27,6 +29,10 @@ pnpm poker
 pnpm poker:down
 
 ```
+Server is running on: 
+
+- backend: localhost:4000
+- frontend localhost:3000
 
 ## e2e - testing frontend with Cypress
 
