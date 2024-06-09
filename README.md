@@ -2,8 +2,8 @@
 
 # Tech stack
 
-- Frontend: SvelteKit and Cypress frontend testing
-- Backend: Node, Express, MongoDB and Jest backend testing
+- Frontend: SvelteKit with Typescript and Cypress frontend testing
+- Backend: Node with Typescript, Express, MongoDB and Jest backend testing
 
 # Configure backend
 
